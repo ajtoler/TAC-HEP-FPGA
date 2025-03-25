@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="assignment3p2.c" path="/afs/hep.wisc.edu/user/atoler/fpga/assignment3p2/assignment3p2.c"/>
+    <originFiles name="assignment3p2.h" path="/afs/hep.wisc.edu/user/atoler/fpga/assignment3p2/assignment3p2.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
