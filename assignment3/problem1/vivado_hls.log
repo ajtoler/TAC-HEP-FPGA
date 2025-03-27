@@ -1,0 +1,59 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'atoler' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 5.14.0-427.22.1.el9_4.x86_64) on Wed Mar 26 06:07:27 CDT 2025
+INFO: [HLS 200-10] In directory '/afs/hep.wisc.edu/user/atoler/TAC-HEP-FPGA/assignment3/problem1'
+Sourcing Tcl script '/afs/hep.wisc.edu/user/atoler/TAC-HEP-FPGA/assignment3/problem1/problem1/solution4/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/afs/hep.wisc.edu/user/atoler/TAC-HEP-FPGA/assignment3/problem1/problem1'.
+INFO: [HLS 200-10] Adding design file 'lec10ex1.c' to the project
+INFO: [HLS 200-10] Adding design file 'lec10ex1.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'lec10ex1_out_ref.dat' to the project
+INFO: [HLS 200-10] Adding test bench file 'lec10ex1_test.c' to the project
+INFO: [HLS 200-10] Opening solution '/afs/hep.wisc.edu/user/atoler/TAC-HEP-FPGA/assignment3/problem1/problem1/solution4'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 3.125ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu13p-flga2577-1-i'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lec10ex1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106145 ; free virtual = 221264
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106145 ; free virtual = 221264
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106126 ; free virtual = 221245
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106126 ; free virtual = 221245
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106114 ; free virtual = 221234
+INFO: [HLS 200-472] Inferring partial write operation for 'arr' (lec10ex1.c:16:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'arr' (lec10ex1.c:21:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106115 ; free virtual = 221234
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lec10ex1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lec10ex1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.36 seconds; current allocated memory: 139.214 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 139.381 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lec10ex1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec10ex1/y' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec10ex1/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lec10ex1/x' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lec10ex1' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lec10ex1'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 139.716 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 173.25 MHz
+INFO: [RTMG 210-278] Implementing memory 'lec10ex1_arr_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.836 ; gain = 1228.703 ; free physical = 106075 ; free virtual = 221210
+INFO: [VHDL 208-304] Generating VHDL RTL for lec10ex1.
+INFO: [VLOG 209-307] Generating Verilog RTL for lec10ex1.
+INFO: [HLS 200-112] Total elapsed time: 19.96 seconds; peak allocated memory: 139.716 MB.

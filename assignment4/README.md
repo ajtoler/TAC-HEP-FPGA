@@ -1,0 +1,1 @@
+Using ap_int<20> drastically decreased the estimated time from 16.792 ns to 4.290 ns. Additional decreases include the number of cylcles used by the loop from 555 to 525, the FF memory from 938 to 668, LUT memory from 1844 to 609, and of course the array q0/d0 from 32 to the set 20 bits. Overall an improvement.

@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vivado HLS Report for 'assignment4_c'
+================================================================
+* Date:           Thu Mar 27 08:16:48 2025
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        assignment4
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 25.00 ns | 16.792 ns |   3.12 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      556|      556| 13.900 us | 13.900 us |  556|  556|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      555|      555|        37|          -|          -|    15|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      3|        0|      119|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      0|      888|     1543|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|      182|    -|
+|Register             |        -|      -|       50|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      3|      938|     1844|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |assignment4_c_fdibkb_U1  |assignment4_c_fdibkb  |        0|      0|  238|  735|    0|
+    |assignment4_c_sitcud_U2  |assignment4_c_sitcud  |        0|      0|  128|  285|    0|
+    |assignment4_c_sitcud_U3  |assignment4_c_sitcud  |        0|      0|  128|  285|    0|
+    |assignment4_c_sredEe_U4  |assignment4_c_sredEe  |        0|      0|  394|  238|    0|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Total                    |                      |        0|      0|  888| 1543|    0|
+    +-------------------------+----------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |arr_mul_d0          |     *    |      3|  0|  20|          32|          32|
+    |arr_add_d0          |     +    |      0|  0|  39|          32|          32|
+    |i_fu_155_p2         |     +    |      0|  0|  12|           4|           1|
+    |arr_sub_d0          |     -    |      0|  0|  39|          32|          32|
+    |icmp_ln7_fu_149_p2  |   icmp   |      0|  0|   9|           4|           2|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      3|  0| 119|         104|          99|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+-----+-----------+-----+-----------+
+    |     Name    | LUT | Input Size| Bits| Total Bits|
+    +-------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm    |  173|         39|    1|         39|
+    |i_0_reg_123  |    9|          2|    4|          8|
+    +-------------+-----+-----------+-----+-----------+
+    |Total        |  182|         41|    5|         47|
+    +-------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------+----+----+-----+-----------+
+    |       Name       | FF | LUT| Bits| Const Bits|
+    +------------------+----+----+-----+-----------+
+    |ap_CS_fsm         |  38|   0|   38|          0|
+    |i_0_reg_123       |   4|   0|    4|          0|
+    |i_reg_198         |   4|   0|    4|          0|
+    |zext_ln9_reg_203  |   4|   0|   64|         60|
+    +------------------+----+----+-----+-----------+
+    |Total             |  50|   0|  110|         60|
+    +------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------+-----+-----+------------+---------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | assignment4_c | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | assignment4_c | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | assignment4_c | return value |
+|ap_done           | out |    1| ap_ctrl_hs | assignment4_c | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | assignment4_c | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | assignment4_c | return value |
+|arr1_address0     | out |    4|  ap_memory |      arr1     |     array    |
+|arr1_ce0          | out |    1|  ap_memory |      arr1     |     array    |
+|arr1_q0           |  in |   32|  ap_memory |      arr1     |     array    |
+|arr2_address0     | out |    4|  ap_memory |      arr2     |     array    |
+|arr2_ce0          | out |    1|  ap_memory |      arr2     |     array    |
+|arr2_q0           |  in |   32|  ap_memory |      arr2     |     array    |
+|arr_add_address0  | out |    4|  ap_memory |    arr_add    |     array    |
+|arr_add_ce0       | out |    1|  ap_memory |    arr_add    |     array    |
+|arr_add_we0       | out |    1|  ap_memory |    arr_add    |     array    |
+|arr_add_d0        | out |   32|  ap_memory |    arr_add    |     array    |
+|arr_sub_address0  | out |    4|  ap_memory |    arr_sub    |     array    |
+|arr_sub_ce0       | out |    1|  ap_memory |    arr_sub    |     array    |
+|arr_sub_we0       | out |    1|  ap_memory |    arr_sub    |     array    |
+|arr_sub_d0        | out |   32|  ap_memory |    arr_sub    |     array    |
+|arr_mul_address0  | out |    4|  ap_memory |    arr_mul    |     array    |
+|arr_mul_ce0       | out |    1|  ap_memory |    arr_mul    |     array    |
+|arr_mul_we0       | out |    1|  ap_memory |    arr_mul    |     array    |
+|arr_mul_d0        | out |   32|  ap_memory |    arr_mul    |     array    |
+|arr_div_address0  | out |    4|  ap_memory |    arr_div    |     array    |
+|arr_div_ce0       | out |    1|  ap_memory |    arr_div    |     array    |
+|arr_div_we0       | out |    1|  ap_memory |    arr_div    |     array    |
+|arr_div_d0        | out |   32|  ap_memory |    arr_div    |     array    |
+|arr_mod_address0  | out |    4|  ap_memory |    arr_mod    |     array    |
+|arr_mod_ce0       | out |    1|  ap_memory |    arr_mod    |     array    |
+|arr_mod_we0       | out |    1|  ap_memory |    arr_mod    |     array    |
+|arr_mod_d0        | out |   32|  ap_memory |    arr_mod    |     array    |
++------------------+-----+-----+------------+---------------+--------------+
+
