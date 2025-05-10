@@ -11,11 +11,9 @@ using namespace std;
 
 #define N 30
 
-typedef ap_uint<5>   din5_t;
-typedef ap_uint<6>   din6_t;
-typedef ap_uint<8>   din8_t;
+typedef ap_uint<2>   din2_t;
 typedef ap_uint<9>   din9_t;
-typedef ap_uint<10>  din10_t;
+typedef ap_uint<11>  din11_t;
 
 void read_data(din9_t *in_r, din9_t *out_r);
 void compute_blur(din9_t *in_c, din9_t *out_c);

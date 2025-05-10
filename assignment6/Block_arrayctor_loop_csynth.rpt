@@ -1,0 +1,196 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_arrayctor_loop'
+================================================================
+* Date:           Sat May 10 16:54:23 2025
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        assignment6
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 25.00 ns | 6.240 ns |   3.12 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      253|      253| 6.325 us | 6.325 us |  253|  253|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      252|      252|         9|          -|          -|    28|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      1|        -|        -|    -|
+|Expression           |        -|      0|        0|      129|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|       70|       74|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|      113|    -|
+|Register             |        -|      -|       60|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      1|      130|      316|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF | LUT| URAM|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |example_mux_364_9cud_U6  |example_mux_364_9cud  |        0|      0|   0|  15|    0|
+    |example_mux_364_9cud_U7  |example_mux_364_9cud  |        0|      0|   0|  15|    0|
+    |example_mux_364_9cud_U8  |example_mux_364_9cud  |        0|      0|   0|  15|    0|
+    |example_urem_5ns_bkb_U5  |example_urem_5ns_bkb  |        0|      0|  70|  29|    0|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+    |Total                    |                      |        0|      0|  70|  74|    0|
+    +-------------------------+----------------------+---------+-------+----+----+-----+
+
+    * DSP48E: 
+    +-------------------------+----------------------+----------------+
+    |         Instance        |        Module        |   Expression   |
+    +-------------------------+----------------------+----------------+
+    |example_am_addmuldEe_U9  |example_am_addmuldEe  | i0 * (i1 + i2) |
+    +-------------------------+----------------------+----------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |mul_ln215_1_fu_250_p2  |     *    |      0|  0|  23|           6|           5|
+    |mul_ln215_2_fu_286_p2  |     *    |      0|  0|  23|           6|           5|
+    |mul_ln215_fu_223_p2    |     *    |      0|  0|  23|           6|           5|
+    |add_ln20_fu_213_p2     |     +    |      0|  0|  15|           2|           5|
+    |i_fu_276_p2            |     +    |      0|  0|  15|           1|           5|
+    |ret_V_fu_346_p2        |     +    |      0|  0|  17|          10|          10|
+    |icmp_ln18_fu_201_p2    |   icmp   |      0|  0|  11|           5|           3|
+    |ap_block_state1        |    or    |      0|  0|   2|           1|           1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      0|  0| 129|          37|          39|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  50|         11|    1|         11|
+    |ap_done             |   9|          2|    1|          2|
+    |i_0_i_i_reg_189     |   9|          2|    5|         10|
+    |temp1_V_0_address0  |  15|          3|    4|         12|
+    |temp1_V_1_address0  |  15|          3|    4|         12|
+    |temp1_V_2_address0  |  15|          3|    4|         12|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 113|         24|   19|         59|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |ap_CS_fsm               |  10|   0|   10|          0|
+    |ap_done_reg             |   1|   0|    1|          0|
+    |i_0_i_i_reg_189         |   5|   0|    5|          0|
+    |i_reg_441               |   5|   0|    5|          0|
+    |temp1_V_0_load_reg_416  |   9|   0|    9|          0|
+    |temp1_V_1_load_reg_421  |   9|   0|    9|          0|
+    |temp1_V_2_load_reg_411  |   9|   0|    9|          0|
+    |temp2_0_addr_reg_461    |   4|   0|    4|          0|
+    |temp2_1_addr_reg_466    |   4|   0|    4|          0|
+    |temp2_2_addr_reg_471    |   4|   0|    4|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   |  60|   0|   60|          0|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+----------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_done             | out |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_continue         |  in |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | Block_arrayctor.loop | return value |
+|temp1_V_2_address0  | out |    4|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_2_ce0       | out |    1|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_2_q0        |  in |    9|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_2_address1  | out |    4|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_2_ce1       | out |    1|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_2_q1        |  in |    9|  ap_memory |       temp1_V_2      |     array    |
+|temp1_V_0_address0  | out |    4|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_0_ce0       | out |    1|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_0_q0        |  in |    9|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_0_address1  | out |    4|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_0_ce1       | out |    1|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_0_q1        |  in |    9|  ap_memory |       temp1_V_0      |     array    |
+|temp1_V_1_address0  | out |    4|  ap_memory |       temp1_V_1      |     array    |
+|temp1_V_1_ce0       | out |    1|  ap_memory |       temp1_V_1      |     array    |
+|temp1_V_1_q0        |  in |    9|  ap_memory |       temp1_V_1      |     array    |
+|temp1_V_1_address1  | out |    4|  ap_memory |       temp1_V_1      |     array    |
+|temp1_V_1_ce1       | out |    1|  ap_memory |       temp1_V_1      |     array    |
+|temp1_V_1_q1        |  in |    9|  ap_memory |       temp1_V_1      |     array    |
+|temp2_0_address0    | out |    4|  ap_memory |        temp2_0       |     array    |
+|temp2_0_ce0         | out |    1|  ap_memory |        temp2_0       |     array    |
+|temp2_0_we0         | out |    1|  ap_memory |        temp2_0       |     array    |
+|temp2_0_d0          | out |    9|  ap_memory |        temp2_0       |     array    |
+|temp2_1_address0    | out |    4|  ap_memory |        temp2_1       |     array    |
+|temp2_1_ce0         | out |    1|  ap_memory |        temp2_1       |     array    |
+|temp2_1_we0         | out |    1|  ap_memory |        temp2_1       |     array    |
+|temp2_1_d0          | out |    9|  ap_memory |        temp2_1       |     array    |
+|temp2_2_address0    | out |    4|  ap_memory |        temp2_2       |     array    |
+|temp2_2_ce0         | out |    1|  ap_memory |        temp2_2       |     array    |
+|temp2_2_we0         | out |    1|  ap_memory |        temp2_2       |     array    |
+|temp2_2_d0          | out |    9|  ap_memory |        temp2_2       |     array    |
++--------------------+-----+-----+------------+----------------------+--------------+
+
