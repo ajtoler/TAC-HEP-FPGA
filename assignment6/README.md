@@ -1,5 +1,5 @@
-Initial DSP = 4, see initial_example_csynth.rpt
+Initial DSP = 4, see initial_csynth.rpt
 
-With pragmas from ex-all DSP = 28, see initialPragmas_example_csynth.rpt and initialPragmas_compute_blur_csynth.rpt
+With submitted alterations DSP = 0.
 
-With submitted alterations DSP = 1 from instance Block_example_exit_U0, module Block_example_exit_s, variable mul_ln1371_fu_154_p2, see final_example_csynth.rpt and final_Block_example_exit_s_csynth.rpt
+Added HLS Pipeline II=2, Allocation instances=mul limit=0 operation, and Inline pragmas to compute_blur function. Changed variable types to din9_t, in addition to setting the sum in compute_blue to type din9_t before dividing by 3.
