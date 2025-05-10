@@ -1,5 +1,3 @@
-Initial DSP = 4, see initial_csynth.rpt
-
-With submitted alterations DSP = 1.
+Initial DSP = 4, final DSP = 1.
 
 Unfortunately I was unable to get it to DSP = 0, it appears to be due to the division by 3, possibly by being optimized as a multiplication by a reciprocal bypassing the imposed HLS allocation limit of 0. This can further be seen in final_csynth.rpt where instance Block_arrayctor_loop_U0, module Block_arrayctor_loop is using 1 DSP. Following this to Block_arrayctor_loop_csyth.rpt, we see instance example_am_addmuldEe_U9, module example_am_addmuldEe, expression i0 * (i1 + i2) using the 1 DSP. This is further supported when using HLS unroll, in which the DSP usage increases to 28 (the number of iterations of the compute_blur loop) and the Block_arrayctor_loop_csyth.rpt changes to instances example_am_addmulbkb_U5 to U32, module example_am_addmulbkb, expression (i0 + i1) * i2.
