@@ -1,0 +1,1 @@
+Part A, pre-optimization changes: Changed values assigned A and B to random numbers so that when C is calculated it isn't already sorted. With N changed to 64 and SORT_N remaining at 32, the resulting matrix C has 64 elements, but only the first 32 are sorted. Additionally the pragma HLS PIPELINE was simply commented out and the prod and temp were changed to typ din_t.
