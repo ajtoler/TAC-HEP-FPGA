@@ -11,9 +11,10 @@ using namespace std;
 
 #define N 64
 
-typedef ap_int<32>  din_t;
+typedef ap_uint<4>   din4_t;
+typedef ap_uint<5>   din5_t;
+typedef ap_uint<15>  din15_t;
 
-void example(din_t A[N][N], din_t B[N][N], din_t C[N][N]);
-
+void example(din4_t A[N][N], din5_t B[N][N], din15_t C[N][N]);
 
 #endif
