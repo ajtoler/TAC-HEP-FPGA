@@ -1,0 +1,33 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+Tower Energy: 
+0 0 
+0 0 
+0 0 
+0 0 
+0 0 
+0 0 
+0 2 
+1 2 
+0 0 
+38 158 
+60 78 
+0 0 
+0 0 
+0 0 
+4 2 
+0 0 
+0 0 
+
+Sorted 3x3 Cluster Energy: 
+220 219 219 218 198 196 175 166 155 77 
+
+Sorted 5x5 Cluster Energy: 
+303 289 286 284 277 275 272 267 264 262 
+
+Sorted 7x7 Cluster Energy: 
+323 322 322 321 317 316 315 314 309 302 
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
