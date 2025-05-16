@@ -29,10 +29,12 @@ Submitted Work:
 HLS Pragma Implementation:
 | Version Number         | Latency (cycles) | Latency (absolute) [ms] | BRAM | DSP  | FF    | LUT    | URAM |
 | ---------------------- | ---------------- | ----------------------- | ---- | ---- | ----- | ------ | ---- |
-| 1 - initial_csynth.rpt | ?                | ?                       | 10   | 0    | 1512  | 4229   | 0    |
-| 2                      | 2279411          | 56.985                  | 60   | 0    | 2170  | 8089   | 0    |
+| 1 - initial_csynth.rpt | ?                | ?                       | 0    | 0    | 464   | 1582   | 0    |
+| 2                      | ?                | ?                       | 10   | 0    | 1512  | 4229   | 0    |
+| 3                      | 2279411          | 56.985                  | 60   | 0    | 2170  | 8089   | 0    |
 1. No pragmas used
-2. Added following pragmas  
+2. Added buffers
+3. Added following pragmas  
     - project function:
         - STABLE variable=crystal_energy
         - ARRAY_PARTITION variable=crystal_energy_buffer1 complete dim=2
@@ -58,4 +60,4 @@ HLS Pragma Implementation:
         - ARRAY_PARTITION variable=buffer complete dim=2
         - PIPELINE II=1
         - LOOP_TRIPCOUNT min=1 max=850
-3. Restructed sort_cluster_energy to map 2D unsorted_cluster to 1D flattened_array to be sorted. Converted all sorted cluster_energy to 1D lists of energy.
+4. Restructed sort_cluster_energy to map 2D unsorted_cluster to 1D flattened_array to be sorted. Converted all sorted cluster_energy to 1D lists of energy.
