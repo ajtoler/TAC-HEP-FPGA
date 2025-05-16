@@ -22,14 +22,14 @@ typedef ap_uint<16> din16_t; // energy in cluster
 
 void project(din8_t crystal_energy[GLOBAL_ETA][GLOBAL_PHI],
              din16_t tower_energy[TOWER_ETA][TOWER_PHI], 
-             din16_t cluster_3x3_energy[GLOBAL_ETA][GLOBAL_PHI],
-             din16_t cluster_5x5_energy[GLOBAL_ETA][GLOBAL_PHI],
-             din16_t cluster_7x7_energy[GLOBAL_ETA][GLOBAL_PHI]);
+             din16_t list_3x3_energy[GLOBAL_ETA * GLOBAL_PHI],
+             din16_t list_5x5_energy[GLOBAL_ETA * GLOBAL_PHI],
+             din16_t list_7x7_energy[GLOBAL_ETA * GLOBAL_PHI]);
 void calculate_tower_energy(din8_t crystal_energy[GLOBAL_ETA][GLOBAL_PHI],
                   din16_t tower_energy[TOWER_ETA][TOWER_PHI]);
 void calculate_cluster_energy(din8_t crystal_energy[GLOBAL_ETA][GLOBAL_PHI],
                     din16_t cluster_energy[GLOBAL_ETA][GLOBAL_PHI],
                     din2_t offset);
-void sort_cluster_energy(din16_t cluster_energy[GLOBAL_ETA][GLOBAL_PHI]);
+void sort_cluster_energy(din16_t unsorted_cluster[GLOBAL_ETA][GLOBAL_PHI], din16_t sorted_list[GLOBAL_ETA * GLOBAL_PHI]);
 
 #endif
